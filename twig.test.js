@@ -27,7 +27,7 @@ describe("groupArrayElements.test", () => {
         });
     });
 
-    describe("If the size of the originally array can be divided equally by 3", () => {
+    describe("If the size of the original array can be divided equally by 3", () => {
         let result;
 
         beforeAll(() => {
@@ -39,25 +39,65 @@ describe("groupArrayElements.test", () => {
         });
 
         it("should return arrays that contain all the original elements in the argument", () => {
-            const resultConcat = [].concat.apply([], result);
-            expect(resultConcat).toEqual([1, 2, 3, 4, 5, 6]);
+            expect(result).toEqual([
+                [1, 2],
+                [3, 4],
+                [5, 6]
+            ]);
         });
     });
 
-    describe("If the size of the originally array cannot be divided equally by 3", () => {
-        let result;
+    describe("If the size of the original array divided by N is 1.25", () => {
+        describe("is 1.25", () => {
+            let result;
 
-        beforeAll(() => {
-            result = groupArrayElements([1, 2, 3, 4, 5], 3);
+            beforeAll(() => {
+                result = groupArrayElements([1, 2, 3, 4, 5], 4);
+            });
+
+            it("should return the 3 elements in the return array", () => {
+                expect(result.length).toEqual(3);
+            });
+
+            it("should return arrays that contain all the original elements in the argument", () => {
+                expect(result).toEqual([[1, 2], [3, 4], [5]]);
+            });
         });
 
-        it("should return the same number elements (3) in the return array", () => {
-            expect(result.length).toEqual(3);
+        describe("is 1.50", () => {
+            let result;
+
+            beforeAll(() => {
+                result = groupArrayElements([1, 2, 3, 4, 5, 6], 4);
+            });
+
+            it("should return the 3 elements in the return array", () => {
+                expect(result.length).toEqual(3);
+            });
+
+            it("should return arrays that contain all the original elements in the argument", () => {
+                expect(result).toEqual([
+                    [1, 2],
+                    [3, 4],
+                    [5, 6]
+                ]);
+            });
         });
 
-        it("should return arrays that contain all the original elements in the argument", () => {
-            const resultConcat = [].concat.apply([], result);
-            expect(resultConcat).toEqual([1, 2, 3, 4, 5]);
+        describe("is 1.75", () => {
+            let result;
+
+            beforeAll(() => {
+                result = groupArrayElements([1, 2, 3, 4, 5, 6, 7], 4);
+            });
+
+            it("should return the 3 elements in the return array", () => {
+                expect(result.length).toEqual(4);
+            });
+
+            it("should return arrays that contain all the original elements in the argument", () => {
+                expect(result).toEqual([[1, 2], [3, 4], [5, 6], [7]]);
+            });
         });
     });
 });
