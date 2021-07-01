@@ -26,3 +26,12 @@ argOne = [1, 2, 3, 4, 5]
 argTwo = 4
 
 result of function = [ [1, 2], [3, 4], [5] ]
+
+If the array length can then be divided equally rounded number, then the result will produce equal array elements.
+
+For example:
+
+argOne = [1, 2, 3, 4, 5, 6]
+argTwo = 4
+
+result of function = [ [1, 2], [3, 4], [5, 6] ]
