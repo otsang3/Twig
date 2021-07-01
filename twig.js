@@ -1,4 +1,4 @@
-const numsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numsArr = [1, 2, 3, 4, 5];
 const numOfGroups = 3;
 
 const groupArrayElements = (numsArr, numOfGroups) => {
@@ -8,6 +8,7 @@ const groupArrayElements = (numsArr, numOfGroups) => {
 
     if (!argOneIsAnArr || !argTwoIsAnInt) return;
 
+    // the max number of elements allowed in each array element
     const maxNumberOfElementsPerArr = Math.ceil(numsArr.length / numOfGroups);
 
     // temporary numCount used for tracking the loop
