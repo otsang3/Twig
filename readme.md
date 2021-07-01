@@ -18,7 +18,7 @@ Tests are run using Jest. To run the test, simply run "npm test" in terminal
 
 // ASSUMPTIONS
 
-When the array length cannot be divided equally by N, the function will round upwards to the nearest int. This means that, in this scenario, the function never returns the number of elements within the result array that is greater than N.
+When the array length cannot be divided equally by N, the function will round upwards to the nearest number. This means that, in this scenario, the function never returns the number of elements within the result array that is greater than N.
 
 For example:
 
@@ -27,7 +27,7 @@ argTwo = 4
 
 result of function = [ [1, 2], [3, 4], [5] ]
 
-If the array length can then be divided equally rounded number, then the result will produce equal array elements.
+If the array length can then be divided equally by the rounded up number, then the result will produce equal array elements.
 
 For example:
 
