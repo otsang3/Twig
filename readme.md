@@ -15,3 +15,14 @@ To run the function you must use node. In your terminal, run "node twig.js", thi
 // RUNNING THE TESTS
 
 Tests are run using Jest. To run the test, simply run "npm test" in terminal
+
+// ASSUMPTIONS
+
+When the array length cannot be divided equally by N, the function will round upwards to the nearest int. This means that, in this scenario, the function never returns the number of elements within the result array that is greater than N.
+
+For example:
+
+argOne = [1, 2, 3, 4, 5, 6, 7]
+argTwo = 4
+
+result of function = [ [1, 2], [3, 4], [5, 6], [7] ]
