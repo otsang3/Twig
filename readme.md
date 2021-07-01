@@ -22,7 +22,7 @@ When the array length cannot be divided equally by N, the function will round up
 
 For example:
 
-argOne = [1, 2, 3, 4, 5, 6, 7]
+argOne = [1, 2, 3, 4, 5]
 argTwo = 4
 
-result of function = [ [1, 2], [3, 4], [5, 6], [7] ]
+result of function = [ [1, 2], [3, 4], [5] ]
