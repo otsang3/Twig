@@ -1,3 +1,9 @@
+// INTRODUCTION
+
+Given an array of length >= 0 and a positive integer N, the function should return the contents of the array divided into the N equally sized arrays.
+
+Where the size of the original array cannot be divided equally by N, the final part should have a length equal to the remainder.
+
 // SET UP
 
 Clone the repository to a desired location. In terminal, navigate to the new folder that is a clone of the repo and run "npm install".
